@@ -25,28 +25,28 @@
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
 
   <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
-  <script type="text/javascript">
-      (function() {
-          // https://dashboard.emailjs.com/admin/account
-          emailjs.init({
-            publicKey: "dEMCCw_Hs-Vi9UU94",
-          });
-      })();
-  </script>
-  <script type="text/javascript">
-      window.onload = function() {
-          document.getElementById('contact-form').addEventListener('submit', function(event) {
-              event.preventDefault();
-              // these IDs from the previous steps
-              emailjs.sendForm('contact_service', 'contact_form', this)
-                  .then(() => {
-                      console.log('SUCCESS!');
-                  }, (error) => {
-                      console.log('FAILED...', error);
-                  });
-          });
-      }
-  </script>
+    <script type="text/javascript">
+        (function() {
+            // https://dashboard.emailjs.com/admin/account
+            emailjs.init({
+              publicKey: "dEMCCw_Hs-Vi9UU94",
+            });
+        })();
+    </script>
+    <script type="text/javascript">
+        window.onload = function() {
+            document.getElementById('contact-form').addEventListener('submit', function(event) {
+                event.preventDefault();
+                // these IDs from the previous steps
+                emailjs.sendForm('service_3qpt0ma', 'template_2pdp2wf', this)
+                    .then(() => {
+                        console.log('SUCCESS!');
+                    }, (error) => {
+                        console.log('FAILED...', error);
+                    });
+            });
+        }
+    </script>
 </head>
 
 <body>
@@ -223,17 +223,14 @@
 
         <section class="about-text">
           <p>
-            I'm Creative Director and UI/UX Designer from Sydney, Australia, working in web development and print media.
-            I enjoy
-            turning complex problems into simple, beautiful and intuitive designs.
+            I am a self-employed(more like unemployed) Full-stack developer originally from Madhya Pradesh, 
+            India currently pursuing an Advance Diploma in Canada. I love problem-solving and have a knack for challenging myself.
           </p>
 
           <p>
-            My job is to build your website so that it is functional and user-friendly but at the same time attractive.
-            Moreover, I
-            add personal touch to your product and make sure that is eye-catching and easy to use. My aim is to bring
-            across your
-            message and identity in the most creative way. I created web design for many famous brand companies.
+            I enjoy building new things and always want to collaborate and network with witty individuals to develop innovative solutions. 
+            But, I also struggle with a disease of introvertism that prevents me from approaching people. 
+            I hope that I can overcome this hurdle and make amends to my approach.
           </p>
         </section>
 
@@ -258,7 +255,7 @@
                 <h4 class="h4 service-item-title">UI/UX Design</h4>
 
                 <p class="service-item-text">
-                  The most modern and high-quality design made at a professional level.
+                  Want to provide great user experience and interfaces.
                 </p>
               </div>
 
@@ -274,7 +271,7 @@
                 <h4 class="h4 service-item-title">Web Development</h4>
 
                 <p class="service-item-text">
-                  High-quality development of sites at the professional level.
+                  Want to develop high-quality sites at the professional level.
                 </p>
               </div>
 
@@ -290,7 +287,7 @@
                 <h4 class="h4 service-item-title">Game Development</h4>
 
                 <p class="service-item-text">
-                  Professional development of applications for iOS and Android.
+                  Want to come up with innovative and never-seen before game loops.
                 </p>
               </div>
 
@@ -306,7 +303,7 @@
                 <h4 class="h4 service-item-title">Machine Learning</h4>
 
                 <p class="service-item-text">
-                  I make high-quality photos of any category at a professional level.
+                  Want to get more in Machine Learning and maybe one day get own LLM.
                 </p>
               </div>
 
@@ -322,7 +319,7 @@
                 <h4 class="h4 service-item-title">App Development</h4>
 
                 <p class="service-item-text">
-                  Professional development of applications for iOS and Android.
+                  Want to develop apps but never tried this before at a level that acceptable(other than "Hello World" toast).
                 </p>
               </div>
 
@@ -338,7 +335,7 @@
                 <h4 class="h4 service-item-title">Cloud Computing</h4>
 
                 <p class="service-item-text">
-                  Professional development of applications for iOS and Android.
+                  Want to get into to learn about to get high-level understanding of Cloud and Networking in-general.
                 </p>
               </div>
 
@@ -421,9 +418,7 @@
               <span>2023 — Present</span>
 
               <p class="timeline-text">
-                Nemo enims ipsam voluptatem, blanditiis praesentium voluptum delenit atque corrupti, quos dolores et
-                quas molestias
-                exceptur.
+                Currently in my 4th semester, pursuing an Advance Diploma in Computer Programming and Analysis.
               </p>
 
             </li>
@@ -451,9 +446,8 @@
               <span>July 2024 — Present</span>
 
               <p class="timeline-text">
-                Nemo enim ipsam voluptatem blanditiis praesentium voluptum delenit atque corrupti, quos dolores et qvuas
-                molestias
-                exceptur.
+                Great Opportunity to work with some great people and network outside my comfort zone. 
+                Want to really excel and make Yasin Proud(sorry for late submission). 
               </p>
 
             </li>
@@ -465,9 +459,9 @@
               <span>Aug 2024 — Dec 2024</span>
 
               <p class="timeline-text">
-                Nemo enims ipsam voluptatem, blanditiis praesentium voluptum delenit atque corrupti, quos dolores et
-                quas molestias
-                exceptur.
+                Finally secured my first co-op term as a Full-stack intern. 
+                Will be working on a personality-quiz website that determine people's personality then on the basis of that, 
+                personalized Trading Teaching will be provided to them.
               </p>
 
             </li>
@@ -747,6 +741,7 @@
   -->
   <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
   <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+  
 
 </body>
 
