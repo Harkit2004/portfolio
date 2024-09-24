@@ -15,7 +15,7 @@ const overlay = document.querySelector("[data-overlay]");
 // custom select variables
 const select = document.querySelector("[data-select]");
 const selectItems = document.querySelectorAll("[data-select-item]");
-const selectValue = document.querySelector("[data-selecct-value]");
+const selectValue = document.querySelector("[data-select-value]");
 const filterBtn = document.querySelectorAll("[data-filter-btn]");
 
 select.addEventListener("click", function () { elementToggleFunc(this); });
@@ -31,7 +31,7 @@ for (let i = 0; i < selectItems.length; i++) {
     filterFunc(selectedValue);
 
   });
-  
+
 }
 
 // filter variables
