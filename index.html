@@ -39,11 +39,11 @@
                 event.preventDefault();
                 // these IDs from the previous steps
                 emailjs.sendForm('service_3qpt0ma', 'template_2pdp2wf', this)
-                    .then(() => {
-                        console.log('SUCCESS!');
-                    }, (error) => {
-                        console.log('FAILED...', error);
-                    });
+                .then(() => {
+                    console.log('SUCCESS!');
+                }, (error) => {
+                    console.log('FAILED...', error);
+                });
             });
         }
     </script>
@@ -169,10 +169,6 @@
 
     </aside>
 
-
-
-
-
     <!--
       - #main-content
     -->
@@ -207,10 +203,6 @@
 
       </nav>
 
-
-
-
-
       <!--
         - #ABOUT
       -->
@@ -223,7 +215,7 @@
 
         <section class="about-text">
           <p>
-            I am a self-employed(more like unemployed) Full-stack developer originally from Madhya Pradesh, 
+            I am in my first coop as a Full-stack Intern at Meta Trading Club, originally from Madhya Pradesh, 
             India currently pursuing an Advance Diploma in Canada. I love problem-solving and have a knack for challenging myself.
           </p>
 
@@ -351,7 +343,7 @@
 
         <section class="clients">
 
-          <h3 class="h3 clients-title">Technologies I am Passionate about</h3>
+          <h3 class="h3 clients-title">Technologies</h3>
 
           <ul class="clients-list has-scrollbar">
 
@@ -361,6 +353,10 @@
 
             <li class="clients-item">
                 <img src="./assets/images/nextjs.svg" alt="skill logo">
+            </li>
+
+            <li class="clients-item"> 
+              <img src="./assets/images/tesnorflow.svg" alt="skill logo">
             </li>
 
             <li class="clients-item"> 
@@ -384,10 +380,6 @@
         </section>
 
       </article>
-
-
-
-
 
       <!--
         - #RESUME
@@ -415,10 +407,10 @@
 
               <h4 class="h4 timeline-item-title">Seneca Polytechnic</h4>
 
-              <span>2023 — Present</span>
+              <span>May 2023 — Present</span>
 
               <p class="timeline-text">
-                Currently in my 4th semester, pursuing an Advance Diploma in Computer Programming and Analysis.
+                Completed my 4th sem in CPA(Computer Programming and Analysis) Advance Diploma and currently on my first co-op term as a Full-stack Intern.
               </p>
 
             </li>
@@ -443,11 +435,12 @@
 
               <h4 class="h4 timeline-item-title">Incoming Software Engineering Fellow, Headstarter</h4>
 
-              <span>July 2024 — Present</span>
+              <span>July 2024 — Sept 2024</span>
 
               <p class="timeline-text">
-                Great Opportunity to work with some great people and network outside my comfort zone. 
-                Want to really excel and make Yasin Proud(sorry for late submission). 
+                Had a blast building new things with random people met online and networked outside my comfort zone. 
+                Build an AI based object detecting Inventory Manager, that appends the items only based on the images provided.
+                Also connected it to uploadThing to store all the images online with their URL in Firebase DB.  
               </p>
 
             </li>
@@ -456,12 +449,12 @@
 
               <h4 class="h4 timeline-item-title">Full-Stack Intern, Meta Trading Club</h4>
 
-              <span>Aug 2024 — Dec 2024</span>
+              <span>Aug 2024 — Present</span>
 
               <p class="timeline-text">
                 Finally secured my first co-op term as a Full-stack intern. 
-                Will be working on a personality-quiz website that determine people's personality then on the basis of that, 
-                personalized Trading Teaching will be provided to them.
+                Working on mostly on the back-end of personality-quiz website that determine people's personality then on the basis of that, 
+                personalized trading teaching will be provided to them.
               </p>
 
             </li>
@@ -493,7 +486,7 @@
 
               <div class="title-wrapper">
                 <h5 class="h5">Machine Learning</h5>
-                <data value="65">65%</data>
+                <data value="75">75%</data>
               </div>
 
               <div class="skill-progress-bg">
@@ -506,7 +499,7 @@
 
               <div class="title-wrapper">
                 <h5 class="h5">UI/UX Design</h5>
-                <data value="80">80%</data>
+                <data value="65">65%</data>
               </div>
 
               <div class="skill-progress-bg">
@@ -534,10 +527,7 @@
 
       </article>
 
-
-
-
-
+      
       <!--
         - #PORTFOLIO
       -->
@@ -709,9 +699,9 @@
           <form id="contact-form" class="form" data-form>
 
             <div class="input-wrapper">
-              <input type="text" name="fullname" class="form-input" placeholder="Full name" required data-form-input>
+              <input type="text" name="from_name" class="form-input" placeholder="Full name" required data-form-input>
 
-              <input type="email" name="email" class="form-input" placeholder="Email address" required data-form-input>
+              <input type="email" name="from_email" class="form-input" placeholder="Email address" required data-form-input>
             </div>
 
             <textarea name="message" class="form-input" placeholder="Your Message" required data-form-input></textarea>
