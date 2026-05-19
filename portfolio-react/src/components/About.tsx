@@ -7,39 +7,48 @@ const About = ({ isActive }: AboutProps) => {
     {
       icon: '/assets/images/web-design.svg',
       title: 'UI/UX Design',
-      description: 'Want to provide great user experience and interfaces.'
+      description:
+        'I design clear, consistent interfaces that feel intuitive on first use and hold up as products grow in scope and complexity.'
     },
     {
       icon: '/assets/images/web-dev.svg',
       title: 'Web Development',
-      description: 'Want to develop high-quality sites at the professional level.'
+      description:
+        'I build full-stack applications that are fast, reliable, and ready for real users—from early prototypes through production releases.'
     },
     {
       icon: '/assets/images/game-dev.svg',
       title: 'Game Development',
-      description: 'Want to come up with innovative and never-seen before game loops.'
+      description:
+        'I craft engaging mechanics and feedback loops that keep players curious, challenged, and coming back for another round.'
     },
     {
       icon: '/assets/images/ml.svg',
-      title: 'Machine Learning',
-      description: 'Want to get more in Machine Learning and maybe one day get own LLM.'
+      title: 'AI and ML',
+      description:
+        'I turn data into useful intelligence—training models, building pipelines, and shipping features that solve problems people actually have.'
     },
     {
       icon: '/assets/images/app-dev.svg',
       title: 'App Development',
-      description: 'Want to develop apps but never tried this before at a level that acceptable(other than "Hello World" toast).'
+      description:
+        'I deliver mobile experiences that feel native, responsive, and dependable whether the product is consumer-facing or internal.'
     },
     {
       icon: '/assets/images/cloud-computing.svg',
       title: 'Cloud Computing',
-      description: 'Want to get into to learn about to get high-level understanding of Cloud and Networking in-general.'
+      description:
+        'I run software at scale with deployments that are secure, observable, and built to recover gracefully when things go wrong.'
     }
   ]
 
   const technologies = [
     { logo: '/assets/images/reactjs.svg', alt: 'React.js' },
     { logo: '/assets/images/nextjs.svg', alt: 'Next.js' },
-    { logo: '/assets/images/tesnorflow.svg', alt: 'TensorFlow' },
+    { logo: '/assets/images/spring-boot.svg', alt: 'Spring Boot' },
+    { logo: '/assets/images/express-js.svg', alt: 'Express', wide: true },
+    { logo: '/assets/images/tensorflow.svg', alt: 'TensorFlow' },
+    { logo: '/assets/images/pytorch.svg', alt: 'PyTorch' },
     { logo: '/assets/images/tailwindcss.svg', alt: 'Tailwind CSS' },
     { logo: '/assets/images/mongo.svg', alt: 'MongoDB' },
     { logo: '/assets/images/postgresql.svg', alt: 'PostgreSQL' },
@@ -54,14 +63,17 @@ const About = ({ isActive }: AboutProps) => {
 
       <section className="about-text">
         <p>
-          I am an international student originally from Madhya Pradesh, 
-          India currently pursuing an Advance Diploma in Canada. I love problem-solving and have a knack for challenging myself.
+          I am a software engineer based in Toronto, ON, with an Advanced Diploma in Computer
+          Programming and Analysis from Seneca Polytechnic, where I earned a 4.0 GPA. I enjoy
+          building products end to end—from the experience people interact with to the systems
+          that keep everything running reliably behind the scenes.
         </p>
 
         <p>
-          I enjoy building new things and always want to collaborate and network with witty individuals to develop innovative solutions. 
-          But, I also struggle with a disease of introvertism that prevents me from approaching people. 
-          I hope that I can overcome this hurdle and make amends to my approach.
+          As a founding engineer, I have helped build 5+ products across 3 startups, shipping
+          production software across web, mobile, intelligent systems, and cloud infrastructure. I
+          also stay sharp through hackathons and side projects, and I am most engaged when a
+          problem is open-ended and the solution takes both careful thinking and steady iteration.
         </p>
       </section>
 
@@ -89,7 +101,7 @@ const About = ({ isActive }: AboutProps) => {
 
         <ul className="clients-list has-scrollbar">
           {technologies.map((tech, index) => (
-            <li key={index} className="clients-item">
+            <li key={index} className={`clients-item${tech.wide ? ' clients-item--wide' : ''}`}>
               <img src={tech.logo} alt={tech.alt} />
             </li>
           ))}

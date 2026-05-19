@@ -1,3 +1,4 @@
+// cspell:ignore Harkit Chhabra
 import { useState } from 'react'
 import IonIcon from './IonIcon'
 
@@ -8,12 +9,23 @@ const Sidebar = () => {
     <aside className={`sidebar ${isActive ? 'active' : ''}`} data-sidebar>
       <div className="sidebar-info">
         <figure className="avatar-box">
-          <img src="/assets/images/new-my-avatar.jpg" alt="Harkit Singh Chhabra" style={{borderRadius: '20px'}} />
+          <img
+            className="avatar-image"
+            src="/assets/images/avatar-300.jpg"
+            srcSet="/assets/images/avatar-300.jpg 1x, /assets/images/avatar-600.jpg 2x"
+            sizes="(min-width: 1250px) 150px, 80px"
+            alt="Harkit Singh Chhabra"
+            width="600"
+            height="600"
+            loading="eager"
+            decoding="async"
+            fetchPriority="high"
+          />
         </figure>
 
         <div className="info-content">
           <h1 className="name" title="Harkit Singh Chhabra">Harkit Singh Chhabra</h1>
-          <p className="title">Software Developer</p>
+          <p className="title">Software Engineer</p>
         </div>
 
         <button className="info_more-btn" data-sidebar-btn onClick={() => setIsActive(!isActive)}>

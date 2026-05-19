@@ -344,12 +344,17 @@ main {
   width: 80px;
   height: 80px;
   overflow: hidden;
+  margin: 0;
 }
 
-.avatar-box img {
+.avatar-image {
+  display: block;
   width: 100%;
   height: 100%;
+  border-radius: inherit;
   object-fit: cover;
+  object-position: center 42%;
+  image-rendering: auto;
 }
 
 .info-content .name {
@@ -744,13 +749,18 @@ main {
  * #clients 
  */
 
-.clients { margin-bottom: 15px; }
+.clients {
+  --tech-logo-height: 88px;
+  --tech-logo-width: 88px;
+  --tech-logo-width-wide: 260px;
+  margin-bottom: 15px;
+}
 
 .clients-list {
   display: flex;
   justify-content: flex-start;
-  align-items: flex-start;
-  gap: 15px;
+  align-items: center;
+  gap: 20px;
   margin: 0 -15px;
   padding: 25px;
   padding-bottom: 25px;
@@ -762,12 +772,25 @@ main {
 }
 
 .clients-item {
-  min-width: 50%;
+  flex: 0 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: var(--tech-logo-width);
+  height: var(--tech-logo-height);
   scroll-snap-align: start;
 }
 
+.clients-item--wide {
+  width: var(--tech-logo-width-wide);
+}
+
 .clients-item img {
+  display: block;
   width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: center;
   filter: grayscale(1);
   transition: var(--transition-1);
 }
@@ -1257,7 +1280,11 @@ textarea.form-input::-webkit-resizer { display: none; }
    * client
    */
 
-  .clients-item { min-width: calc(33.33% - 10px); }
+  .clients {
+    --tech-logo-height: 96px;
+    --tech-logo-width: 96px;
+    --tech-logo-width-wide: 250px;
+  }
 
 
 
@@ -1361,9 +1388,9 @@ textarea.form-input::-webkit-resizer { display: none; }
     height: 120px;
   }
 
-  .avatar-box img { 
-    width: 120px;
-    height: 120px;
+  .avatar-image { 
+    width: 100%;
+    height: 100%;
   }
 
   .info-content .name { margin-bottom: 15px; }
@@ -1505,7 +1532,11 @@ textarea.form-input::-webkit-resizer { display: none; }
     scroll-padding-inline: 45px;
   }
 
-  .clients-item { min-width: calc(33.33% - 35px); }
+  .clients {
+    --tech-logo-height: 104px;
+    --tech-logo-width: 104px;
+    --tech-logo-width-wide: 270px;
+  }
 
 
 
@@ -1761,7 +1792,11 @@ textarea.form-input::-webkit-resizer { display: none; }
 
   /* clients */
 
-  .clients-item { min-width: calc(25% - 38px); }
+  .clients {
+    --tech-logo-height: 112px;
+    --tech-logo-width: 112px;
+    --tech-logo-width-wide: 290px;
+  }
 
 
 
@@ -1865,9 +1900,9 @@ textarea.form-input::-webkit-resizer { display: none; }
     height: 150px;
   }
 
-  .avatar-box img { 
-    width: 150px;
-    height: 150px;
+  .avatar-image { 
+    width: 100%;
+    height: 100%;
   }
 
   .info-content .name {
