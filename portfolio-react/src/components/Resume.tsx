@@ -7,28 +7,74 @@ interface ResumeProps {
 const Resume = ({ isActive }: ResumeProps) => {
   const education = [
     {
-      title: 'Seneca Polytechnic',
-      period: 'May 2023 — Present',
-      description: 'Currently pursuing a CPA(Computer Programming and Analysis) Advance Diploma.'
+      title: 'Seneca Polytechnic — Computer Programming and Analysis',
+      period: 'May 2023 — Dec 2025',
+      description: 'Advanced Diploma, Toronto, ON. GPA: 4.0/4.0.'
     }
   ]
 
   const experience = [
     {
-      title: 'Full-Stack Developer, Meta Trading Club',
-      period: 'Aug 2024 — Dec 2024',
-      description: 'Led full-stack development of a Personality Quiz Website using React, Node.js, Express, and MySQL, completing backend and admin panel UI in 1 month. Built personality algorithms, designed the database ERD, and managed the team using Notion and Google Meet.'
+      title: 'Software Engineer, Pragra.io',
+      period: 'Jan 2026 — Present',
+      description: 'Built a multi-tenant SaaS LMS with static-site deployment, finance handling, AI-generated courses, and staff management. Developed the customer-facing website and a self-hosted CMS with 3 locales. Deployed 8 containerized services on Kubernetes with autoscaling, ingress, and TLS, and shipped a white-label mobile app. Designed and built a CRM for 10 agents managing 6,000+ contacts with mailing, calling, SMS, pipelines, and automated campaigns.'
     },
     {
-      title: 'Software Developer, Ai Financial',
+      title: 'Full Stack Developer, Ai Financial',
       period: 'May 2025 — Aug 2025',
-      description: 'Built scalable web apps using Java, Spring Boot, React, and TypeScript, while streamlining QA with a Selenium-powered Streamlit tool. Collaborated with cross-functional teams to deliver accessible, high-performance solutions.'
+      description: 'Delivered backend endpoints and database entities across 3 core application flows within 1-week sprints. Built a Streamlit automation app that cut QA cycle time by 50% for a 6-developer team. Created end-to-end testing documentation for 6+ workflows and resolved critical UI bugs while implementing Storybook throughout development.'
+    },
+    {
+      title: 'Full Stack Developer, Meta Trading Club Inc.',
+      period: 'Aug 2024 — Dec 2024',
+      description: 'Co-developed 10+ database entities with 5-6 backend endpoints each and contributed to ERD design. Led a 3-developer integration team for 3 months and implemented Oracle Cloud deployment. Solo-built an admin dashboard for 21+ entities and developed a URL-embedded quiz result algorithm for seamless sharing and dynamic loading.'
+    }
+  ]
+
+  const hackathons = [
+    {
+      title: 'Microsoft X Seneca X Amity Design Jam',
+      period: 'March2025',
+      description: 'Winner'
+    },
+    {
+      title: 'TerraHacks',
+      period: 'August 2025',
+      description: 'Winner'
+    },
+    {
+      title: 'NASA Space App Challenge (Toronto)',
+      period: 'October 2025',
+      description: 'Winner'
+    },
+    {
+      title: "GDG TMU SolutionHacks",
+      period: 'July 2025',
+      description: 'Runner-Up'
+    },
+    {
+      title: 'HackThe6ix',
+      period: 'July 2025',
+      description: 'Finalist'
+    },
+    {
+      title: 'PIM International Hackathon',
+      period: 'November 2024',
+      description: 'Semi-Finalist'
+    }
+  ]
+
+  const achievements = [
+    {
+      title: "President's Honour List",
+      period: 'Multiple-time',
+      description: 'Multiple-time recipient for academic excellence at Seneca Polytechnic.'
     }
   ]
 
   const skills = [
     { name: 'Frontend Development', level: 85 },
-    { name: 'Machine Learning', level: 80 },
+    { name: 'AI and ML', level: 80 },
     { name: 'UI/UX Design', level: 70 },
     { name: 'Backend Development', level: 95 }
   ]
@@ -71,6 +117,44 @@ const Resume = ({ isActive }: ResumeProps) => {
             <li key={index} className="timeline-item">
               <h4 className="h4 timeline-item-title">{item.title}</h4>
               <span>{item.period}</span>
+              <p className="timeline-text">{item.description}</p>
+            </li>
+          ))}
+        </ol>
+      </section>
+
+      <section className="timeline">
+        <div className="title-wrapper">
+          <div className="icon-box">
+            <IonIcon name="trophy-outline" />
+          </div>
+          <h3 className="h3">Hackathons & Competitions</h3>
+        </div>
+
+        <ol className="timeline-list">
+          {hackathons.map((item, index) => (
+            <li key={index} className="timeline-item">
+              <h4 className="h4 timeline-item-title">{item.title}</h4>
+              {item.period && <span>{item.period}</span>}
+              <p className="timeline-text">{item.description}</p>
+            </li>
+          ))}
+        </ol>
+      </section>
+
+      <section className="timeline">
+        <div className="title-wrapper">
+          <div className="icon-box">
+            <IonIcon name="ribbon-outline" />
+          </div>
+          <h3 className="h3">Academic Achievements</h3>
+        </div>
+
+        <ol className="timeline-list">
+          {achievements.map((item, index) => (
+            <li key={index} className="timeline-item">
+              <h4 className="h4 timeline-item-title">{item.title}</h4>
+              {item.period && <span>{item.period}</span>}
               <p className="timeline-text">{item.description}</p>
             </li>
           ))}

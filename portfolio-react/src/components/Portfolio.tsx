@@ -5,11 +5,44 @@ interface PortfolioProps {
   isActive: boolean
 }
 
+const CATEGORY_LABELS: Record<string, string> = {
+  'web development': 'Web development',
+  'ai and ml': 'AI and ML',
+  'game development': 'Game Development'
+}
+
+const formatCategory = (category: string) =>
+  CATEGORY_LABELS[category] ?? category
+
 const Portfolio = ({ isActive }: PortfolioProps) => {
   const [selectedCategory, setSelectedCategory] = useState('all')
   const [selectActive, setSelectActive] = useState(false)
 
   const projects = [
+    {
+      title: 'Babble Bear',
+      category: 'ai and ml',
+      image: '/assets/images/babble-bear.png',
+      link: 'https://github.com/Babelly-The-Bear'
+    },
+    {
+      title: 'Zenvi',
+      category: 'ai and ml',
+      image: '/assets/images/zenvi.png',
+      link: 'https://github.com/Zenvi-pro/zenvi-core'
+    },
+    {
+      title: 'AstroAbode',
+      category: 'web development',
+      image: '/assets/images/astro-abode.png',
+      link: 'https://github.com/Moustafa-FD/habitat-layout'
+    },
+    {
+      title: 'RendorRealty',
+      category: 'ai and ml',
+      image: '/assets/images/rendor-realty.png',
+      link: 'https://github.com/RendorRealty'
+    },
     {
       title: 'getREALS',
       category: 'web development',
@@ -18,13 +51,13 @@ const Portfolio = ({ isActive }: PortfolioProps) => {
     },
     {
       title: 'ASL(American Sign Language) To Speech',
-      category: 'machine learning',
+      category: 'ai and ml',
       image: '/assets/images/asl-to-speech.png',
       link: 'https://github.com/Harkit2004/ASL-to-Speech'
     },
     {
       title: 'Avatar-X',
-      category: 'machine learning',
+      category: 'ai and ml',
       image: '/assets/images/avatar-x.png',
       link: 'https://github.com/Harkit2004/AvatarX'
     },
@@ -42,7 +75,7 @@ const Portfolio = ({ isActive }: PortfolioProps) => {
     },
     {
       title: 'Game Recommendation System',
-      category: 'machine learning',
+      category: 'ai and ml',
       image: '/assets/images/recc-sys.png',
       link: 'https://github.com/Harkit2004/recommendation-system'
     },
@@ -54,7 +87,7 @@ const Portfolio = ({ isActive }: PortfolioProps) => {
     }
   ]
 
-  const filterCategories = ['All', 'Web development', 'Machine Learning', 'Game Development']
+  const filterCategories = ['All', 'Web development', 'AI and ML', 'Game Development']
 
   const handleFilterClick = (category: string) => {
     setSelectedCategory(category.toLowerCase())
@@ -120,7 +153,7 @@ const Portfolio = ({ isActive }: PortfolioProps) => {
                 </figure>
 
                 <h3 className="project-title">{project.title}</h3>
-                <p className="project-category">{project.category}</p>
+                <p className="project-category">{formatCategory(project.category)}</p>
               </a>
             </li>
           ))}
